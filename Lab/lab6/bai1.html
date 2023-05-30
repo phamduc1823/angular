@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>lab 6 bài 1</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container" ng-controller="myCtrl">
+        <div class="row">
+            <div class="col">
+                <form action="" name="form">
+                    <div class="card py-3 px-3">
+                        <div class="col-md-12 text-center">
+                            Tính lương thưởng tết nguyên đám
+                        </div>
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label">Họ và tên</label>
+                            <input type="text" ng-model="fullname" class="form-control" name="fullname" id="fullname"
+                                aria-describedby="fullnamehelpId" placeholder="Tên">
+                            <!-- <small id="fullnamehelpId" class="form-text text-muted">Họ tên không được để trống!</small> -->
+                            <div class="mb-3">
+                                <label for="salary" class="form-label">Lương:</label>
+                                <div class="input-group mb-3">
+                                    <input ng-model="salary" type="text" class="form-control" name="salary" id="salary"
+                                        aria-describedby="salaryhelpId" placeholder="Lương">
+                                    <span class="input-group-text" id="suffixId">VNĐ</span>
+                                </div>
+                                <!-- <small id="salaryhelpId" class="form-text text-muted">Lương không được để trống!</small> -->
+                            </div>
+                            <span> Giới tính:</span>
+                            <div class="form-check">
+                                <input ng-model="gender" class="form-check-input" value="Nam" type="radio"
+                                    name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Nam
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input ng-model="gender" class="form-check-input" type="radio" value="Nu"
+                                    name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Nữ
+                                </label>
+                            </div>
+                            <span>Lương:</span>
+                            <select class="form-select" ng-model="age" ng-options="x.age for x in ages"
+                                aria-label="Default select example">
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            Tiền thưởng: <strong>{{getBonus()|number:2}}</strong>VNĐ
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="js/BonusController.js"></script>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

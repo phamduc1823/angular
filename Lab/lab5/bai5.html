@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Lab 5 bài 5</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body ng-app="myApp">
+    <div class="container" ng-controller="proCtrl">
+        <div class="row">
+            <div class="col-md-3" ng-repeat="p in listProduct">
+                <div class="card my-3">
+                    <div class="card-header text-center bg-info">
+                        <span>{{p.name}}</span>
+                    </div>
+                    <div class="card-body">
+                        <img style="max-width: 100%;" height="300" src="{{p.img}}" alt="">
+                    </div>
+                    <div class="card-footer text-center">
+                        <span>{{p.price}}$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var app = angular.module("myApp",[]);
+        app.controller("proCtrl",function($scope){
+            $scope.listProduct = [
+                {
+                    name: "Cây 1",
+                    img: "https://img.nhandan.com.vn/Files/Images/2020/07/26/nhat_cay-1595747664059.jpg",
+                    price: 200
+                },
+                {
+                    name: "Cây 2",
+                    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwjwzInVYPoWU7aY9F-LcmWvUrl2Ib5daq2hd4_Rf6nP2CF4cEaHODSaW7TDFJP_g7D0E&usqp=CAU",
+                    price: 200
+                },
+                {
+                    name: "Cây 3",
+                    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6i4qVAVdWtjQfLSQnphr3jQDbqARHNJ5FEub3q3D3q3g63bVrvnRmvqyfq83g9iQtoN8&usqp=CAU",
+                    price: 200
+                },
+                {
+                    name: "Cây 4",
+                    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6paN7fxCIejbchCn_NVdCd_3v-fIh7k6TficxhBbQ54jgP-s6ito32oFCQx-mcCSR3Dk&usqp=CAU",
+                    price: 200
+                },
+                {
+                    name: "Cây 5",
+                    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwxYaweRXkRzR8q91a-zA3gn2I4z66wOrfzVDsYhAyIz6rlDmw0NAfYkZ3ekgL1T2MsX0&usqp=CAU",
+                    price: 200
+                },
+                {
+                    name: "Cây 6",
+                    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9lQdhU2HF_U78VspQ0q5GlJ0UmLKvKP3QrSkTeLqdshA2i3aqJigAmtgfMsil-RJYUOE&usqp=CAU",
+                    price: 200
+                },
+                {
+                    name: "Cây 7",
+                    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-EwnKH_zBwkDYUYa0Q-5oGvozQmf5zxzeh_JialbIHOIHlBzdKKw_qTh3tRh00v_w8Oc&usqp=CAU",
+                    price: 200
+                },
+                {
+                    name: "Cây 8",
+                    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9S11Urb6G0zWvkELc2rVsaphGP5YGWX3R1ghvJzN14Z0xFLFvU46vgv5i7zq_zQZ1xv0&usqp=CAU",
+                    price: 200
+                }
+            ];
+        }); 
+    </script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

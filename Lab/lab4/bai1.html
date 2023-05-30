@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1 bài 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <ul>
+            <img width="300" height="300" src="{{thongTin[4]}}" alt="">
+            <li>
+                Họ và tên: {{thongTin[0]}}
+            </li>
+            <li>
+                Ngày sinh: {{thongTin[1]}}
+            </li>
+            <li>
+                Giới tính: {{thongTin[2]}}
+            </li>
+            <li>
+                Điểm trung bình: {{thongTin[3]}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        var app = angular.module("myApp",[]);
+        app.controller("myCtrl",function($scope){
+            $scope.thongTin = [
+                "Nguyễn Văn A",
+                "10/08/2003",
+                "Nam",
+                8.5,
+                "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
+            ]
+        });
+    </script>
+</body>
+</html>

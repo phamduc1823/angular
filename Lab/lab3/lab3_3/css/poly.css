@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    position: relative;
+}
+.shopping-mall{
+    position: absolute;
+    bottom: 20px;
+    font-variant: small-caps;
+}
+nav{
+    background-color: rgb(60, 60, 60);
+}
+nav .nav-right a{
+    text-decoration: none;
+}
+.shopping-mall > h1{
+    font-family: Impact;
+    font-size: 60px;
+    color: white;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px black;
+    padding-bottom: 0px;
+    border-bottom: 1px dotted gray;
+    margin: 0px;
+}
+.shopping-mall > h5{
+    margin-top: 5px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+.poly-cart{
+    margin-left: 0px;
+}
+.poly-cart ul{
+    margin-left: 0px;
+    margin-top: 10px;
+    padding: 0;
+}
+.poly-cart ul li a{
+    text-decoration: none;
+}
+.khung {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.cate-color{
+    background-color: #eaeaea;
+}
+.poly-prod{
+    text-align: center;
+    padding: 5px;
+}
+.poly-prod .panel-body img{
+    height: 150px;
+    max-width: 95%;
+}
+.panel-default{
+    border: 1px solid #ccc;  
+}

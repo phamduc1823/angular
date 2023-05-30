@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0px auto;
+}
+header{
+    background-color: blue;
+    height: 150px;
+    text-align: center;
+}
+header h2{
+    line-height: 90px;
+}
+nav{
+    background-color: yellow;
+    height: 40px;
+    text-align: center;
+}
+nav h2{
+    margin-top: 4px;
+}
+article{
+    text-align: center;
+    background-color: cyan;
+    height: 200px;
+}
+article h1{
+    margin-top: 65px;
+}
+aside{
+    text-align: center;
+    background-color: blueviolet;
+    height: 200px;
+}
+aside h1{
+    margin-top: 65px;
+}
+footer{
+    text-align: center;
+    height: 50px;
+    background-color: #ccc;
+    clear: both;
+}
+footer h1{
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="myCtrl">
+            Nhập a:
+            <input type="text" value="" ng-model="a"><br><br>
+            Nhập b:
+            <input type="text" value="" ng-model="b">
+            <button ng-click="sayHello()">In thông báo!</button>
+            <hr>
+            {{greeting}}
+        </div>
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller('myCtrl', function myCtrl($scope) {
+                $scope.sayHello = function () {
+
+                    $tong = parseFloat($scope.a) + parseFloat($scope.b);
+                    $scope.greeting = "Tổng: " + $tong + "!";
+                };
+            }) 
+        </script>
+    </div>
+</body>
+
+</html>

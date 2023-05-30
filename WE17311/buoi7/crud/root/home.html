@@ -1,0 +1,21 @@
+<article>
+    <a href="#them" class="btn btn-outline-primary">Thêm</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="scope">Id</th>
+                <th class="scope">Category name</th>
+                <th class="scope">Name</th>
+                <th class="scope">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="p in products">
+                <td>{{p.id}}</td>
+                <td>{{p.categoryName}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.price}} VNĐ</td>
+            </tr>
+        </tbody>
+    </table>
+</article>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Lab 7 bài 5</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+  <div class="container" ng-controller="myCtrl">
+    <table class="table table-bordered mt-4">
+      <thead>
+        <tr>
+        <tr>
+          <th colspan="4" class="scope">Danh sách hàng hóa</th>
+        </tr>
+        </tr>
+        <tr>
+          <th><a href="#" class="nav-link text-primary" ng-click="sortBy('name')">Sản phẩm</a></th>
+          <th><a href="#" class="nav-link text-primary" ng-click="sortBy('price')">Đơn giá</a></th>
+          <th><a href="#" class="nav-link text-primary" ng-click="sortBy('discount')">Giảm giá</a></th>
+          <th><a href="#" class="nav-link text-primary" ng-click="sortBy('date')">Ngày</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="p in listProduct | orderBy:prop | limitTo:8:begin">
+          <td class="scope">{{p.name|uppercase}}</td>
+          <td class="scope">{{p.price|currency}}</td>
+          <td class="scope">{{p.discount|percentage:2}}</td>
+          <td class="scope">{{p.date|date:"MMMM-dd, yyyy"}}</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class="scope text-center" colspan="4">
+            <button class="btn btn-outline-primary" ng-click="first()">First</button>
+            <button class="btn btn-outline-primary" ng-click="prev()">Prev</button>
+            <button class="btn btn-outline-primary" ng-click="next()">Next</button>
+            <button class="btn btn-outline-primary" ng-click="last()">Last</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function ($scope, $http) {
+      $scope.listProduct = [];
+      $http.get('Prods2.js').then(function (response) {
+        $scope.listProduct = response.data;
+        $scope.prop = "name";
+        $scope.sortBy = function (prop) {
+          $scope.prop = prop;
+        }
+        $scope.begin = 0;
+        $scope.pageCount = Math.ceil($scope.listProduct.length / 8);
+        $scope.last = function () {
+          $scope.begin = ($scope.pageCount - 1) * 8;
+        };
+        $scope.first = function () {
+          $scope.begin = 0;
+        };
+        $scope.next = function () {
+          if ($scope.begin < ($scope.pageCount - 1) * 8) {
+            $scope.begin += 8;
+          }
+        }
+        $scope.prev = function () {
+          if ($scope.begin > 0) {
+            $scope.begin -= 8;
+          }
+        }
+      }, function (response) {
+        alert("Dữ liệu không được hiển thị!");
+      });
+    });
+    app.filter("percentage", function ($filter) {
+      return function (input, decimals) {
+        return $filter('number')(input * 100, decimals) + '%';
+      };
+    });
+  </script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

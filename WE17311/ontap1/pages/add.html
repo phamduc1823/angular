@@ -1,0 +1,15 @@
+<form action="" name="form">
+    <label for="" class="form-label">Name</label>
+    <input type="text" class="form-control" required ng-model="name" name="name">
+    <small ng-show="form.name.$invalid">Không được để trống</small><br>
+
+    <label for="" class="form-label">Giá</label>
+    <input type="number" min="0" class="form-control" required ng-model="price" name="price">
+    <small ng-show="form.price.$invalid">Không được để trống</small><br>
+
+    <label for="" class="form-label">Category</label>
+    <input type="text" class="form-control" required ng-model="category" name="category">
+    <small ng-show="form.category.$invalid">Không được để trống</small><br>
+
+    <button type="button" ng-click="submit()" class="btn btn-outline-primary mt-3">Add</button>
+</form>

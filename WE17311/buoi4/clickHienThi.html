@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app = "myApp">
+        <div ng-controller="myCtrl">
+            Nhập tên của bạn:
+            <input type="text" value="" ng-model="username">
+            <button ng-click="sayHello()">In thông báo!</button>
+            <hr>
+            {{greeting}}
+        </div>
+        <script>
+            var app = angular.module("myApp",[]);
+            app.controller('myCtrl',function myCtrl($scope){
+                $scope.sayHello = function () {
+                    $scope.greeting = "Xin chào " + $scope.username + "!";
+                };
+            }) 
+        </script>
+    </div>
+</body>
+</html>

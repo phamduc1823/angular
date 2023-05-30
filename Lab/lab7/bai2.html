@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Lab 7 bài 2</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="Prods.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+  <div class="container" ng-controller="myCtrl">
+    <table class="table table-bordered mt-4">
+      <thead>
+        <tr>
+          <tr>
+            <th colspan="4" class="scope">Danh sách hàng hóa</th>
+          </tr>
+        </tr>
+        <tr>
+          <th class="scope">Sản phẩm</th>
+          <th class="scope">Đơn giá</th>
+          <th class="scope">Giảm giá</th>
+          <th class="scope">Ngày</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="p in listProduct">
+          <td class="scope">{{p.name|uppercase}}</td>
+          <td class="scope">{{p.price|currency}}</td>
+          <td class="scope">{{p.discount|percentage:2}}</td>
+          <td class="scope">{{p.date|date:"MMMM-dd, yyyy"}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    var app = angular.module("myApp",[]);
+    app.controller("myCtrl", function($scope,$http){
+      $scope.listProduct = list;
+    });
+    app.filter("percentage",function($filter){
+      return function(input, decimals){
+        return $filter('number')(input * 100, decimals)+'%';
+      };
+    });
+  </script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

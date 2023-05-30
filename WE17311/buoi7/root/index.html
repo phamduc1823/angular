@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+<body ng-app="myApp">
+    <a href="#!1">Màu xanh</a>
+    <a href="#!2">Màu đỏ</a>
+    <a href="#!3">Mặc định</a>
+    <div ng-view>
+
+    </div>
+    <script>
+        var app = angular.module("myApp",["ngRoute"]);
+        app.config(function ($routeProvider){
+            $routeProvider
+            .when("/1",{
+                templateUrl: "blue.html",
+                controller: "blueCtrl",
+                controllerAs: "blue"
+            })
+            .when("/2",{
+                templateUrl: "red.html",
+                controller: "redContl"
+            })
+            .otherwise({
+                template: "<h1>Mặc định</h1>"
+            });
+        });
+        app.controller("blueCtrl", function(){
+            this.msg = "Sử dụng controller blue";
+        })
+        app.controller("redContl", function($scope){
+            $scope.msg = "Sử dụng controller red";
+        })
+    </script>
+</body>
+</html>

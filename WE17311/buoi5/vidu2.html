@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    
+    <div ng-controller="cha">
+        {{textCha}}
+        {{textCon}}
+        <br>
+        <hr>
+        <div ng-controller="con">
+            {{textCha}} <br>
+            {{textCon}}
+            <hr>
+            <div ng-controller="chau">
+                {{$parent.textCha}} <br>
+                {{$parent.textCon}} <br>
+                {{textChau}}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module("myApp",[]);
+        app.controller("cha",function($scope){
+            $scope.textCha = "Lớp cha";
+        });
+        app.controller("con",function($scope){
+            $scope.textCon = "Lớp con";
+        });
+        app.controller("chau",function($scope){
+            $scope.textChau = "Lớp cháu";
+        });
+    </script>
+</body>
+</html>

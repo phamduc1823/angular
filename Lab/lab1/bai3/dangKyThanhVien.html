@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Mall</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/470e9e3eb2.js" crossorigin="anonymous"></script>
+
+    <!--Poly-->
+    <link rel="stylesheet" href="css/poly.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Header-->
+        <header class="row">
+            <div class="shopping-mall col-md-4">
+                <h1>Online shopping mall</h1>
+                <h5 class="">The center point of the professional programming</h5>
+            </div>
+            <div>
+                <img src="images/header-object.png" class="float-end" alt="">
+            </div>
+        </header>
+        <!--Nav-->
+        <nav class="navbar navbar-expand-lg navbar-light rounded mb-3">
+            <div class="container-fluid">
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-secondary" aria-current="page" href="#">
+                                <i class="fa-solid fa-house"></i>
+                                Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-secondary" aria-current="page" href="#">
+                                <i class="fa-solid fa-bars"></i>
+                                Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-secondary" aria-current="page" href="#">
+                                <i class="fa-solid fa-phone"></i>
+                                Liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-secondary" aria-current="page" href="gopy.html">
+                                <i class="fa-solid fa-envelope"></i>
+                                Góp ý</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-secondary" aria-current="page" href="#">
+                                <i class="fa-solid fa-circle-question"></i>
+                                Hỏi đáp</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                                Tài khoản
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-dark" href="#">Đăng nhập</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Quên mật khẩu</a></li>
+                                <li><a class="dropdown-item text-dark" href="dangKyThanhVien.html">Đăng ký thành viên</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-dark" href="#">Đăng xuất</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Đổi mật khẩu</a></li>
+                                <li><a class="dropdown-item text-dark" href="capNhatThongTin.html">Cập nhật hồ sơ</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-dark" href="#">Đơn hàng</a></li>
+                                <li><a class="dropdown-item text-dark" href="donHangDaMua.html">Hàng đã mua</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="nav-right">
+                        <a class="text-secondary" href="">English</a>
+                        <a class="text-secondary mx-3" href="">Tiếng Việt</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row mb-5">
+            <article class="col-md-9">
+                <div class="container poly-cart1">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" id="navId">
+                        <li class="nav-item">
+                            <a href="#tab1Id" class="nav-link active" data-toggle="tab">Thông Tin Cá Nhân</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#tab2Id" class="nav-link " data-toggle="tab">Danh Sách Thành Viên</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab1Id" role="tabpanel">
+                            <div class="card poly-cart1">
+                                <div class="card-header">
+                                    <span class="glyphicon glyphicon-user"></span><strong> Thông Tin</strong>
+                                </div>
+                                <form action="#">
+                                    <div class="row" style="margin: 5px;">
+                                        <div class="form-group col-sm-6">
+                                            <label for=""><strong>Tên đăng nhập</strong></label>
+                                            <input type="text" class="form-control" placeholder="UserName.....">
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label for=""><strong>Số điện thoại</strong></label>
+                                            <input type="text" class="form-control" placeholder="PhoneNumber.....">
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label for=""><strong>Email</strong></label>
+                                            <input type="text" class="form-control" placeholder="Email.....">
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label for=""><strong>Địa chỉ</strong></label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">......</option>
+                                                <option value="">Hà Nội</option>
+                                                <option value="">Hồ Chí Minh</option>
+                                                <option value="">Đà Nẵng</option>
+                                                <option value="">Nam Định</option>
+                                                <option value="">Hà Nam</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label for=""><strong>Mức Rank</strong></label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><strong>$</strong></span>
+                                                </div>
+                                                <input class="form-control text-center" type="text" name="" placeholder="...Mức rank tương ứng với mã giảm giá..." aria-label="Recipient's text">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin: 5px;">
+                                    <div class="form-group col-sm-12">
+                                        <button type="submit" class="btn btn-primary" style="font-size: 12px;">Đồng ý</button>
+                                        <button type="reset" class="btn btn-primary" style="font-size: 12px;">Hủy</button>
+                                    </div>
+                                </div>
+                                    
+                                </form>
+                                <div class="card-footer text-center">
+                                    Gửi Đăng Ký Thành Viên 
+                                </div>
+                               </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab2Id" role="tabpanel">
+                            <div class="card poly-cart">
+                                <div class="card-header">
+                                    <span class="glyphicon glyphicon-th-list
+                                "></span> <strong>Danh Sách Thành Viên</strong>
+                                </div>
+                                <table class="table table-bordered" style="margin-bottom: 0;">
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th rowspan="2">Mã Thành Viên</th>
+                                            <th rowspan="2">Tên Thành Viên</th>
+                                            <th colspan="3">Chi Tiết</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Ngày Đăng Ký</th>
+                                            <th>Mức Rank</th>
+                                            <th>Mã Giảm Giá</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">TV1</td>
+                                            <td class="text-center">Ngô Văn A</td>
+                                            <td class="text-center">12/10/2020</td>
+                                            <td class="text-center">Bạc</td>
+                                            <td class="text-center">MKTG4J</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">TV2</td>
+                                            <td class="text-center">Nguyễn Thị B</td>
+                                            <td class="text-center">15/10/2021</td>
+                                            <td class="text-center">Bạch Kim</td>
+                                            <td class="text-center">LKHDN9</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">TP3</td>
+                                            <td class="text-center">Phạm Tiến C</td>
+                                            <td class="text-center">10/9/2019</td>
+                                            <td class="text-center">Kim Cương</td>
+                                            <td class="text-center">KHUBUB8</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="card-footer text-center">
+                                    DKShop - Hạnh Phúc Cho Mọi Người 
+                                </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </article>
+            <aside class="col-md-3 mt-1">
+                <!--View cart-->
+                <div class="poly-cart mb-4 khung">
+                    <div class="panel panel-default p-3">
+                        <div class="panel-body">
+                            <img class="col-md-3" src="images/shoppingcart.gif" alt="">
+                            <ul class="col-md-7 mx-3 float-end">
+                                <li>100 items</li>
+                                <li>56,000 VNĐ</li>
+                                <li><a href="">View Cart</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Search-->
+                <div class="panel panel-default khung">
+                    <div class="panel-body p-3">
+                        <form action="" method="POST">
+                            <input type="text" class="form-control" placeholder="Tìm kiếm">
+                        </form>
+                    </div>
+                </div> 
+                <!--Category-->
+                <div class="panel panel-default mt-4 khung">
+                    <div class="panel-heading cate-color py-2 px-3">
+                            <i class="fa-solid fa-bars"></i>
+                            <strong>Loại</strong>
+                    </div>
+                    <div class="list-group">
+                        <a href="" class="list-group-item">Điện thoại</a>
+                        <a href="" class="list-group-item">Máy tính</a>
+                        <a href="" class="list-group-item">Laptop</a>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+        <footer class="mb-3">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center pt-3">
+                    <p>FPT Polytechnic &copy; 2017. All right reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
